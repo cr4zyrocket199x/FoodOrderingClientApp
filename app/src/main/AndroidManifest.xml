@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cr4zyrocket.foodorderingapp111">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".UserAddress"
+            android:parentActivityName=".ChangeInfo"/>
+        <activity
+            android:name=".ChangeInfo"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".FPassInputNewPass"
+            android:parentActivityName=".FPassInputPhone" />
+        <activity
+            android:name=".FPassInputPhone"
+            android:parentActivityName=".SignIn" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCx0lye_5WnhKOsA-flzgnM06VhxQcAIqI" />
+
+        <activity
+            android:name=".MyLocation"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".OrderInfo"
+            android:parentActivityName=".Cart" />
+        <activity
+            android:name=".OrderPlace"
+            android:parentActivityName=".OrderInfo" />
+        <activity
+            android:name=".AddInfoFacebookLogin"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Favourite"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".OrderDetail"
+            android:parentActivityName=".OrderStatus" />
+        <activity
+            android:name=".OrderStatus"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".Cart"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".FoodDetail"
+            android:parentActivityName=".FoodList" />
+        <activity
+            android:name=".FoodList"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".Home"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignUp"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SignIn"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider360628398643649"
+            android:exported="true" />
+    </application>
+
+</manifest>
